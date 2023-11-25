@@ -8,5 +8,5 @@
 - Please include any additional needed packages into the environment.yml file.
 
 ### Adding the Data to the Project
-- Ensure that when adding the data file to the project, it is placed into the data folder.
+- Ensure that when adding the data file to the project, it is placed into the Data folder in the top level directory of the project.
 
