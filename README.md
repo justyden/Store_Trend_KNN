@@ -6,3 +6,7 @@
 - To update an already existing venv do __conda env update -n your_env_name -f environment.yml__
 - Make sure the directory is correct and also to replace your_env_name with the name desired.
 - Please include any additional needed packages into the environment.yml file.
+
+### Adding the Data to the Project
+- Ensure that when adding the data file to the project, it is placed into the data folder.
+
