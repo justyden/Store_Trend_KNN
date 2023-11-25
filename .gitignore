@@ -160,5 +160,5 @@ cython_debug/
 #.idea/
 
 # Data
-data/*
+/data/*
 !/data/.gitkeep
