@@ -1,6 +1,7 @@
 name: venv
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - pip
   - pandas
@@ -10,3 +11,4 @@ dependencies:
   - seaborn
   - scipy
   - jupyterlab
+  - xlrd
