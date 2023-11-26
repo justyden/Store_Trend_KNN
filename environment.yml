@@ -12,3 +12,4 @@ dependencies:
   - scipy
   - jupyterlab
   - xlrd
+  - openpyxl
