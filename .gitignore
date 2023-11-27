@@ -162,3 +162,4 @@ cython_debug/
 # Data
 Data/*
 !Data/.gitkeep
+!Data/Normalized_Data.xlsx
