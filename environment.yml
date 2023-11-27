@@ -13,3 +13,4 @@ dependencies:
   - jupyterlab
   - xlrd
   - openpyxl
+  - et_xmlfile
