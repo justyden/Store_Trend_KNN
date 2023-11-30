@@ -1,4 +1,5 @@
 # Store Trend Prediciton
+A data mining related application.
 
 ## Team Members:
 - Tyler Thompson
