@@ -30,6 +30,7 @@ Concerning the various feature types, we can observe that it includes a large po
 
 ### Data Example
 The following is an example of the dataset before any preprocessing steps were taken. 
+![Example Data](images/example_data.png)
 
 ## Methodology
 
