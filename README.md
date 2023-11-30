@@ -12,10 +12,10 @@
 In all industries, it is important to understand the target consumers to maximize profits and sales. To elaborate, consumer data is extremely important to analyze and identify any trends that might appear. Consumers can follow certain tendencies depending on the area in which they reside, and as a company, it is important to understand which products they purchase. On top of this, understanding a purchase's profit is also essential to indicate which sales are profiting the most. The scope of this application is to use KNN classification to identify targeted cities and profits within the dataset. 
 
 ### Objective
-This application aims to show a cities likelihood of purchasing a product from an office store. This includes proudcts such as furniture and work supplies. In addition to this, there will also be further classification on the profit associated with each purchase and what that product might be. Since there is such a broad amount of products, this should give a indicator on which cities are buying which items the most, as well as what products were purchased given a price. The premises of this application could prove useful when it comes to showing a company where they would want to focus efforts and sales.
+This application aims to show a city's likelihood of purchasing a product from an office store. This includes products such as furniture and work supplies. In addition to this, there will also be further classification on the profit associated with each purchase and what that product might be. Since there is such a broad range of products, this should give an indicator of which cities are buying which items the most, as well as what products were purchased given a price. The premise of this application could prove useful when it comes to showing a company where they would want to focus efforts and sales.
 
 ### Motivation
-[Explain the motivation behind choosing this project]
+The motivation behind this project includes attempting to simulate a real-world data mining application that involves collaborative teamwork and extensive knowledge within the field. Understanding consumer data is a crucial need for many companies, and this application provides insights to the programmers developing it on what a company could expect from their consumers. On top of this, comprehending the algorithms behind this application, as well as the processes and techniques, is essential knowledge for the developers.
 
 ### Related Work
 [Provide a brief overview of related research and projects]
