@@ -1,19 +1,18 @@
-# Final Project Report
-
-## Title: [Your Project Title]
+# Store Trend Prediciton
 
 ## Team Members:
-- [Team Member 1]
+- Tyler Thompson
+  - Email: tylert123@yahoo.com
 - [Team Member 2]
 - [Team Member 3]
 
 ## Introduction
 
 ### Problem Statement
-[Describe the problem your project aims to address]
+In all industries, it is important to understand the target consumers to maximize profits and sales. To elaborate, consumer data is extremely important to analyze and identify any trends that might appear. Consumers can follow certain tendencies depending on the area in which they reside, and as a company, it is important to understand which products they purchase. On top of this, understanding a purchase's profit is also essential to indicate which sales are profiting the most. The scope of this application is to use KNN classification to identify targeted cities and profits within the dataset. 
 
 ### Objective
-[Clearly state the objective of your project]
+This application aims to show a cities likelihood of purchasing a product from an office store. This includes proudcts such as furniture and work supplies. In addition to this, there will also be further classification on the profit associated with each purchase and what that product might be. Since there is such a broad amount of products, this should give a indicator on which cities are buying which items the most, as well as what products were purchased given a price. The premises of this application could prove useful when it comes to showing a company where they would want to focus efforts and sales.
 
 ### Motivation
 [Explain the motivation behind choosing this project]
