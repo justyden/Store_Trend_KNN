@@ -13,7 +13,7 @@ A data mining related application.
 In all industries, it is important to understand the target consumers to maximize profits and sales. To elaborate, consumer data is extremely important to analyze and identify any trends that might appear. Consumers can follow certain tendencies depending on the area in which they reside, and as a company, it is important to understand which products they purchase. On top of this, understanding a purchase's profit is also essential to indicate which sales are profiting the most. The scope of this application is to use KNN classification to identify targeted cities and profits within the dataset. 
 
 ### Objective
-This application aims to show a city's likelihood of purchasing a product from an office store. This includes products such as furniture and work supplies. In addition to this, there will also be further classification on the profit associated with each purchase and what that product might be. Since there is such a broad range of products, this should give an indicator of which cities are buying which items the most, as well as what products were purchased given a price. The premise of this application could prove useful when it comes to showing a company where they would want to focus efforts and sales.
+This application aims to show a city's likelihood of purchasing a product from an office store. This includes products such as furniture and work supplies. In addition to this, there will also be further classification on the profit associated with each purchase and what that product might be. Since there is such a broad range of products, this should give an indicator of which cities are buying which items the most, as well as what products were purchased given a price. The premise of this application could prove useful when it comes to showing a company where they would want to focus efforts and sales. This application uses the [Anaconda distribution](https://www.anaconda.com/) for Python which includes a plethora of machine learning packages.
 
 ### Motivation
 The motivation behind this project includes attempting to simulate a real-world data mining application that involves collaborative teamwork and extensive knowledge within the field. Understanding consumer data is a crucial need for many companies, and this application provides insights to the programmers developing it on what a company could expect from their consumers. On top of this, comprehending the algorithms behind this application, as well as the processes and techniques, is essential knowledge for the developers.
@@ -38,9 +38,11 @@ The following is an example of the dataset before any preprocessing steps were t
 The following is the structure and processes of the application.
 ![Schematic Diagram](images/schematic_diagram.png)
 
-
 ### Data Visualization and Preprocessing
-[Describe how you visualize and preprocess the data]
+The preprocessing of the data inlcuded a few steps to allow the model to begin working with the data. These steps include the following, convert the .xls file into a .xlsx file. This is because pandas needs the file to be in the updated format, and since this data set is older, this step was needed. The next step inlcuded normalizing the data, which once again involved the pandas package. The normalizing technique used is minimum maximum normalization. It can also also refered to as minimum maxiumum scaling. This technique takes the specified columns and normalizes them to be between 0 and 1. The columns that this was applied to include, sales, quantity, discount, and profit.
+
+How miniumum maximum normalization works
+
 
 ### Procedures and Features
 [Explain the procedures followed and the features used]
