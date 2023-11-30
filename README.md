@@ -18,7 +18,7 @@ This application aims to show a city's likelihood of purchasing a product from a
 The motivation behind this project includes attempting to simulate a real-world data mining application that involves collaborative teamwork and extensive knowledge within the field. Understanding consumer data is a crucial need for many companies, and this application provides insights to the programmers developing it on what a company could expect from their consumers. On top of this, comprehending the algorithms behind this application, as well as the processes and techniques, is essential knowledge for the developers.
 
 ### Related Work
-[Provide a brief overview of related research and projects]
+There are a few related topics to this application, including retail analytics, market basket analysis, geospatial analysis, customer segmentation, predictive modeling, and collaborative filtering. Most of these topics fall within the same scope as this project, incorporating certain techniques from both retail analytics and predictive modeling. Additionally, there is an endless number of projects based on these topics. Some similar projects include determining average sales in an order, identifying the most valuable consumers, and deciding on products to order based on location. Inspiration is drawn from everything previously discussed. 
 
 ## Data
 
