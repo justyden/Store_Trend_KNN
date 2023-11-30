@@ -35,7 +35,9 @@ The following is an example of the dataset before any preprocessing steps were t
 ## Methodology
 
 ### Schematic Diagram/Framework
-[Present a schematic diagram or framework of your methodology]
+The following is the structure and processes of the application.
+![Schematic Diagram](images/schematic_diagram.png)
+
 
 ### Data Visualization and Preprocessing
 [Describe how you visualize and preprocess the data]
