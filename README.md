@@ -1,12 +1,77 @@
-# Store_Trend_KNN
+# Final Project Report
 
-### Setting Up the Venv
-- Creating a new venv __conda create -n your_env_name__
-- If there is no current venv and you want to create a new one that grabs everything from environmen.yml just do conda __env create -f environment.yml__ in the terminal.
-- To update an already existing venv do __conda env update -n your_env_name -f environment.yml__
-- Make sure the directory is correct and also to replace your_env_name with the name desired.
-- Please include any additional needed packages into the environment.yml file.
+## Title: [Your Project Title]
 
-### Adding the Data to the Project
-- Ensure that when adding the data file to the project, it is placed into the Data folder in the top level directory of the project.
+## Team Members:
+- [Team Member 1]
+- [Team Member 2]
+- [Team Member 3]
 
+## Introduction
+
+### Problem Statement
+[Describe the problem your project aims to address]
+
+### Objective
+[Clearly state the objective of your project]
+
+### Motivation
+[Explain the motivation behind choosing this project]
+
+### Related Work
+[Provide a brief overview of related research and projects]
+
+## Data
+
+### Data Source and Format
+[Specify the source of your data and its format]
+
+### Data Example
+[Include an example or snippet of your dataset]
+
+## Methodology
+
+### Schematic Diagram/Framework
+[Present a schematic diagram or framework of your methodology]
+
+### Data Visualization and Preprocessing
+[Describe how you visualize and preprocess the data]
+
+### Procedures and Features
+[Explain the procedures followed and the features used]
+
+## Experiments
+
+### Data Division (Training/Testing)
+[Detail how you divided your data into training and testing sets]
+
+### Parameter Tuning
+[Discuss any parameter tuning performed]
+
+### Evaluation Metrics
+[Specify the metrics used to evaluate your model]
+
+### Results (Tables/Graphs)
+[Present results in the form of tables and graphs]
+
+### Analysis of the Results
+[Analyze and interpret the obtained results]
+
+## Conclusion
+
+### Discuss Any Limitation
+[Highlight limitations encountered during the project]
+
+### Discuss Any Issue Not Resolved
+[Discuss any issues that remain unresolved]
+
+### Future Direction
+[Propose potential directions for future work]
+
+## Appendix
+
+### Snapshots and Others
+[Include relevant snapshots, code snippets, or any additional materials]
+
+## References
+[List the references and sources used in your project]
