@@ -39,9 +39,10 @@ The following is the structure and processes of the application.
 ![Schematic Diagram](images/schematic_diagram.png)
 
 ### Data Visualization and Preprocessing
-The preprocessing of the data inlcuded a few steps to allow the model to begin working with the data. These steps include the following, convert the .xls file into a .xlsx file. This is because pandas needs the file to be in the updated format, and since this data set is older, this step was needed. The next step inlcuded normalizing the data, which once again involved the pandas package. The normalizing technique used is minimum maximum normalization. It can also also refered to as minimum maxiumum scaling. This technique takes the specified columns and normalizes them to be between 0 and 1. The columns that this was applied to include, sales, quantity, discount, and profit.
+The preprocessing of the data inlcuded a few steps to allow the model to begin working with the data. These steps include the following, convert the .xls file into a .xlsx file. This is because pandas needs the file to be in the updated format, and since this data set is older, this step was needed. The next step inlcuded normalizing the data, which once again involved the pandas package. The normalizing technique used is minimum maximum normalization. It can also also refered to as minimum maxiumum scaling. This technique takes the specified columns and normalizes them to be between 0 and 1. The columns that this was applied to include, sales, quantity, discount, and profit. The data was then ready to be trained on.
 
 How miniumum maximum normalization works
+![Normalization Technique](images/normalization_technique.png)
 
 
 ### Procedures and Features
