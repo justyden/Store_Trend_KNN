@@ -24,10 +24,12 @@ There are a few related topics to this application, including retail analytics, 
 ## Data
 
 ### Data Source and Format
-[Specify the source of your data and its format]
+The dataset is from [Sample Super Store](https://community.tableau.com/s/question/0D54T00000CWeX8SAL/sample-superstore-sales-excelxls) and appears in the December Tableau user group presentation. The file type is a .xls file, which is an older Excel file. This dataset includes 9,994 different purchases from various cities within the United States and Canada. There are many features within this dataset. However, the important ones to consider for this application are category, product name, sales, quantity, discount, and profit. The label for the first part of our application is, of course, the city. When it comes to the next part of our application, we will need to take profit into consideration and try to determine which products were purchased.
+
+Concerning the various feature types, we can observe that it includes a large portion of numerical features, categorical features, and ordinal features. The ordinal feature arises from the ship mode feature, but once again, it is not considered important for this application. This application mostly deals with numerical and categorical features. It is important to note this since, in order to be efficient when training the model, many features can be disregarded. With around 10,000 different entries in this file, there is plenty of data to experiment with.
 
 ### Data Example
-[Include an example or snippet of your dataset]
+The following is an example of the dataset before any preprocessing steps were taken. 
 
 ## Methodology
 
