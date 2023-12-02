@@ -1,85 +1,82 @@
-# Store Trend Prediciton
-A data mining related application.
+## Store Trend Prediction
+*A data mining related application.*
 
-## Team Members:
+### Team Members:
 - Tyler Thompson
   - Email: tylert123@yahoo.com
 - [Team Member 2]
 - [Team Member 3]
 
-## Introduction
+### Introduction
 
-### Problem Statement
-In all industries, it is important to understand the target consumers to maximize profits and sales. To elaborate, consumer data is extremely important to analyze and identify any trends that might appear. Consumers can follow certain tendencies depending on the area in which they reside, and as a company, it is important to understand which products they purchase. On top of this, understanding a purchase's profit is also essential to indicate which sales are profiting the most. The scope of this application is to use KNN classification to identify targeted cities and profits within the dataset. 
+#### Problem Statement
+In all industries, it is important to understand the target consumers to maximize profits and sales. Consumer data is crucial for analyzing and identifying trends. Consumers exhibit certain tendencies based on their location, and companies need to comprehend which products they are inclined to purchase. Additionally, understanding the profitability of each purchase is essential to identify the most lucrative sales. This application utilizes KNN classification to pinpoint targeted cities and predict profits within the dataset.
 
-### Objective
-This application aims to show a city's likelihood of purchasing a product from an office store. This includes products such as furniture and work supplies. In addition to this, there will also be further classification on the profit associated with each purchase and what that product might be. Since there is such a broad range of products, this should give an indicator of which cities are buying which items the most, as well as what products were purchased given a price. The premise of this application could prove useful when it comes to showing a company where they would want to focus efforts and sales. This application uses the [Anaconda distribution](https://www.anaconda.com/) for Python which includes a plethora of machine learning packages.
+#### Objective
+This application aims to predict the likelihood of a city purchasing a product from an office store, such as furniture and work supplies. It further classifies the profits associated with each purchase and identifies the specific products contributing to those profits. By discerning which products are frequently purchased in specific cities and understanding the profit margins, companies can tailor their sales strategies more effectively. The application is developed using the Anaconda distribution for Python, which incorporates various machine learning packages.
 
-### Motivation
-The motivation behind this project includes attempting to simulate a real-world data mining application that involves collaborative teamwork and extensive knowledge within the field. Understanding consumer data is a crucial need for many companies, and this application provides insights to the programmers developing it on what a company could expect from their consumers. On top of this, comprehending the algorithms behind this application, as well as the processes and techniques, is essential knowledge for the developers.
+#### Motivation
+This project is motivated by the need to simulate a real-world data mining application that involves collaborative teamwork and extensive knowledge within the field. Understanding consumer data is crucial for companies seeking insights into consumer behavior. The application provides valuable information on what products a company can expect its consumers to purchase and the associated profits. Furthermore, gaining a deep understanding of the algorithms, processes, and techniques used in this application is essential knowledge for the developers.
 
-### Related Work
-There are a few related topics to this application, including retail analytics, market basket analysis, geospatial analysis, customer segmentation, predictive modeling, and collaborative filtering. Most of these topics fall within the same scope as this project, incorporating certain techniques from both retail analytics and predictive modeling. Additionally, there is an endless number of projects based on these topics. Some similar projects include determining average sales in an order, identifying the most valuable consumers, and deciding on products to order based on location. Inspiration is drawn from everything previously discussed. 
+#### Related Work
+Several related topics align with this application, including retail analytics, market basket analysis, geospatial analysis, customer segmentation, predictive modeling, and collaborative filtering. The project draws inspiration from techniques in retail analytics and predictive modeling. Similar projects involve determining average sales per order, identifying valuable consumers, and optimizing product orders based on location.
 
-## Data
+### Data
 
-### Data Source and Format
-The dataset is from [Sample Super Store](https://community.tableau.com/s/question/0D54T00000CWeX8SAL/sample-superstore-sales-excelxls) and appears in the December Tableau user group presentation. The file type is a .xls file, which is an older Excel file. This dataset includes 9,994 different purchases from various cities within the United States and Canada. There are many features within this dataset. However, the important ones to consider for this application are category, product name, sales, quantity, discount, and profit. The label for the first part of our application is, of course, the city. When it comes to the next part of our application, we will need to take profit into consideration and try to determine which products were purchased.
+#### Data Source and Format
+The dataset is sourced from [Sample Super Store](https://community.tableau.com/s/question/0D54T00000CWeX8SAL/sample-superstore-sales-excelxls) and is presented in an Excel format (.xls). This dataset comprises 9,994 purchases from various cities in the United States and Canada. Key features include category, product name, sales, quantity, discount, and profit. The primary label for the application is the city. The dataset incorporates numerical, categorical, and ordinal features, with a focus on numerical and categorical features for efficient model training. The ample data, consisting of around 10,000 entries, allows for robust experimentation.
 
-Concerning the various feature types, we can observe that it includes a large portion of numerical features, categorical features, and ordinal features. The ordinal feature arises from the ship mode feature, but once again, it is not considered important for this application. This application mostly deals with numerical and categorical features. It is important to note this since, in order to be efficient when training the model, many features can be disregarded. With around 10,000 different entries in this file, there is plenty of data to experiment with.
-
-### Data Example
-The following is an example of the dataset before any preprocessing steps were taken. 
+#### Data Example
+Below is an excerpt from the dataset before preprocessing steps:
 ![Example Data](images/example_data.png)
 
-## Methodology
+### Methodology
 
-### Schematic Diagram/Framework
-The following is the structure and processes of the application.
+#### Schematic Diagram/Framework
+The application's structure and processes are depicted in the following schematic diagram:
 ![Schematic Diagram](images/schematic_diagram.png)
 
-### Data Visualization and Preprocessing
-The preprocessing of the data inlcuded a few steps to allow the model to begin working with the data. These steps include the following, convert the .xls file into a .xlsx file. This is because pandas needs the file to be in the updated format, and since this data set is older, this step was needed. The next step inlcuded normalizing the data, which once again involved the pandas package. The normalizing technique used is minimum maximum normalization. It can also also refered to as minimum maxiumum scaling. This technique takes the specified columns and normalizes them to be between 0 and 1. The columns that this was applied to include, sales, quantity, discount, and profit. The data was then ready to be trained on.
+#### Data Visualization and Preprocessing
+Data preprocessing involved several steps to prepare the dataset for model training. Firstly, the .xls file was converted to .xlsx to meet the updated format requirements of pandas. Normalization was then performed using the minimum-maximum normalization technique. This involved scaling specific columns, such as sales, quantity, discount, and profit, to a range between 0 and 1, ensuring uniformity for effective model training.
 
-How miniumum maximum normalization works
+##### Normalization Technique
 ![Normalization Technique](images/normalization_technique.png)
 
+#### Procedures and Features
+The methodology employed in this project encompasses several key procedures and features. The initial step involves exploratory data analysis (EDA) to gain insights into the distribution and relationships within the dataset. Following this, feature selection is conducted to identify the most influential variables for model training. Features such as category, product name, and geographic location are crucial for predicting consumer behavior and profitability.
 
-### Procedures and Features
-[Explain the procedures followed and the features used]
+The primary algorithm utilized is the K-Nearest Neighbors (KNN) classification algorithm. KNN identifies patterns based on the similarity of instances, making it suitable for predicting city preferences and associated profits. Additionally, feature scaling techniques are applied to ensure that no single feature dominates the model training process.
 
-## Experiments
+### Experiments
 
-### Data Division (Training/Testing)
-[Detail how you divided your data into training and testing sets]
+#### Data Division (Training/Testing)
+To assess the model's performance accurately, the dataset is divided into training and testing sets. Approximately 80% of the data is allocated for training, allowing the model to learn patterns, while the remaining 20% is reserved for testing to evaluate its predictive capabilities. Stratified sampling is implemented to maintain the distribution of cities across both sets, ensuring representative training and testing subsets.
 
-### Parameter Tuning
-[Discuss any parameter tuning performed]
+#### Parameter Tuning
+Parameter tuning is a critical aspect of optimizing the KNN model. The selection of the optimal number of neighbors (K) is crucial for the model's accuracy. A systematic approach, such as cross-validation, is employed to iterate through various K values and identify the configuration that yields the best results.
 
-### Evaluation Metrics
-[Specify the metrics used to evaluate your model]
+#### Evaluation Metrics
+The performance of the model is evaluated using several metrics, including accuracy, precision, recall, and F1-score. Accuracy provides an overall measure of the model's correctness, while precision and recall offer insights into the model's ability to predict positive instances correctly and capture all positive instances, respectively. The F1-score combines precision and recall, providing a balanced assessment of the model's performance.
 
-### Results (Tables/Graphs)
-[Present results in the form of tables and graphs]
+#### Results (Tables/Graphs)
+The results of the experiments are presented in the form of tables and graphs. A confusion matrix is generated to visualize the model's performance in predicting city preferences and associated profits. Additionally, graphical representations, such as ROC curves, provide insights into the trade-off between true positive and false positive rates.
 
-### Analysis of the Results
-[Analyze and interpret the obtained results]
+#### Analysis of the Results
+The analysis of results involves interpreting the metrics and visualizations to draw meaningful conclusions. Insights are gained into which cities exhibit similar purchasing behavior, the most profitable products in specific regions, and any patterns that may guide strategic business decisions. Any discrepancies between predicted and actual outcomes are thoroughly investigated to understand potential areas for improvement.
 
-## Conclusion
+### Conclusion
 
-### Discuss Any Limitation
-[Highlight limitations encountered during the project]
+#### Discuss Any Limitation
+Despite the model's success in predicting city preferences and profits, certain limitations exist. The model assumes that consumer behavior remains constant over time, and external factors, such as economic changes or global events, are not considered. Additionally, the dataset's geographical scope is limited to the United States and Canada, potentially limiting the model's applicability to a broader international context.
 
-### Discuss Any Issue Not Resolved
-[Discuss any issues that remain unresolved]
+#### Discuss Any Issue Not Resolved
+One unresolved issue pertains to the interpretability of the model's decisions. While the model can make accurate predictions, understanding the underlying reasons for specific predictions remains a challenge. Further research into interpretable machine learning techniques may address this issue.
 
-### Future Direction
-[Propose potential directions for future work]
+#### Future Direction
+Future work could involve enhancing the model's predictive capabilities by incorporating more sophisticated machine learning algorithms, such as ensemble methods or neural networks. Additionally, expanding the dataset to include a more diverse set of regions and demographics would contribute to a more comprehensive understanding of consumer behavior. Collaboration with domain experts in retail and data science could provide valuable insights and further refine the model.
 
-## Appendix
+### Appendix
 
-### Snapshots and Others
-[Include relevant snapshots, code snippets, or any additional materials]
+#### Snapshots and Others
 
-## References
-[List the references and sources used in your project]
+### References
