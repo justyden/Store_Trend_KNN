@@ -70,6 +70,14 @@ Parameter tuning is a critical aspect of optimizing the KNN model. The selection
 The performance of the model is evaluated using several metrics, including accuracy, precision, recall, and F1-score. Accuracy provides an overall measure of the model's correctness, while precision and recall offer insights into the model's ability to predict positive instances correctly and capture all positive instances, respectively. The F1 score combines precision and recall, providing a balanced assessment of the model's performance.
 
 #### Results (Tables and Graphs)
+
+kNN Algorithm
+
+![Confusion matrix for kNN]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg](https://github.com/justyden/Store_Trend_KNN/blob/data-preproc/graphs/knn/knn_confusion_matrix.png?raw=true)?raw=true)
+
+
+Random Forest
+
 The results of the experiments are presented in the form of tables and graphs. A confusion matrix is generated to visualize the model's performance in predicting city preferences and associated profits. Additionally, graphical representations, such as ROC curves, provide insights into the trade-off between true positive and false positive rates.
 
 #### Analysis of the Results
