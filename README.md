@@ -35,7 +35,7 @@ Below is an excerpt from the dataset before the preprocessing steps:
 
 #### Schematic Diagram/Framework
 The application's structure and processes are depicted in the following schematic diagram:
-![Schematic Diagram](images/schematic_diagram.png)
+![Schematic Diagram](images/schematic_diagram_format.png)
 
 #### Data Visualization and Preprocessing
 Data preprocessing involved several steps to prepare the dataset for model training. Firstly, the.xls file was converted to.xlsx to meet the updated format requirements of Pandas. Normalization was then performed using the minimum-maximum and Z_score normalization techniques. This involved scaling specific columns, such as sales, quantity, discount, and profit, to a range between 0 and 1, ensuring uniformity for effective model training. At first, we used the minimum-maximum normalization technique, but the scaling didn't come out correctly. For example, $-300 of profit and $20 of profit all have the same scaling value, which doesn't seem correct. Then we normalize the data using the Z-Score technique. The scaling looks correct when the profit is high, showing a positive value that is above 0, which means it is above the average profit, and when the profit is super low, it shows a negative value below 0, which means it is below the average profit or even negative. So we decided to use the Z-Score technique.
