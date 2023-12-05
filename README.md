@@ -12,7 +12,6 @@
   - Email: tylert123@yahoo.com
 - Xiang Liu
   - Email: 1784676846.xl@gmail.com  
-- [Team Member 3]
 - Nikolay Sizov
   - Email: madisona.mail@gmail.com
 
