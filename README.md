@@ -2,7 +2,7 @@
 *A data mining related application.*
 
 ### Building and Launching the Application
-- Please go to (Link to setting up venv)[Setting_Up_Venv.md] to learn how to set up the virtual environment for this project. Follow the instructions to install all necessary packages. This project requires the Anaconda distribuition of Python.
+- Please go to [Link to setting up venv](Setting_Up_Venv.md) to learn how to set up the virtual environment for this project. Follow the instructions to install all necessary packages. This project requires the Anaconda distribuition of Python.
 - After configured correctly navigate to the the main directory of the project. You can then begin to run the main.py script which contains the KNN portion of the project.
 - Also run Random_Forest.py to run the random forest portion of the application.
 - Make sure directories are correct as paths may change.
