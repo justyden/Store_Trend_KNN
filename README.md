@@ -70,7 +70,11 @@ Second, we decided to change our features and target to see if we could get bett
 To assess the model's performance accurately, the dataset is divided into training and testing sets. Approximately 80% of the data is allocated for training, allowing the model to learn patterns, while the remaining 20% is reserved for testing to evaluate its predictive capabilities. Stratified sampling is implemented to maintain the distribution of cities across both sets, ensuring representative training and testing subsets.
 
 #### Parameter Tuning
-Parameter tuning is a critical aspect of optimizing the KNN model. The selection of the optimal number of neighbors (K) is crucial for the model's accuracy. A systematic approach, such as cross-validation, is employed to iterate through various K values and identify the configuration that yields the best results.
+### Parameter tuning is a critical aspect of optimizing the KNN and Random Forest models. 
+- The selection of the optimal number of neighbors (K) is crucial for the model's accuracy. A systematic approach, such as cross-validation, is employed to iterate through various K values and identify the configuration that yields the best results.
+- Random state parameters in machine learning algorithms, including the KNN and Random Forest classifiers, serve as a seed for the random number generator used by the algorithm. This parameter is used to ensure reproducibility. When you provide an integer value for a random state, it makes the output of the algorithm deterministic, meaning that you can expect the same results in multiple runs of the algorithm with the same input data and parameter settings.
+- N_estimators serve in Random Forest classifier is the number of trees in the forest. Typically, the more trees, the better the performance, but it also means a longer training time.
+- Max_depth serve The maximum depth of each tree. Deeper trees can model more complex patterns but can also lead to overfitting.
 
 #### Evaluation Metrics
 The performance of the model is evaluated using several metrics, including accuracy, precision, recall, and F1-score. Accuracy provides an overall measure of the model's correctness, while precision and recall offer insights into the model's ability to predict positive instances correctly and capture all positive instances, respectively. The F1 score combines precision and recall, providing a balanced assessment of the model's performance.
