@@ -8,14 +8,14 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # load the data
-data = pd.read_excel('./Data/Z_score.xlsx')
+# data = pd.read_excel('../Data/Z_score.xlsx')
+data = pd.read_excel('../Data/Normalized_Data.xlsx')
 
 # preprocessing
 # drop columns that won't be used in the prediction
 columns_to_drop = ['Row ID', 'Order ID', 'Order Date', 'Ship Date', 'Ship Mode',
                    'Customer ID', 'Country',
-                   'Product ID', 'Sales', 'Quantity', 'Discount',
-                   'Segment', 'Category', 'Product Name', 'State', 'Region', 'Postal Code', 'Customer Name', ]
+                   'Postal Code'] #'Sales', 'Quantity', 'Discount', 'Product ID', 'Customer Name', 'Segment', 'Category', 'Product Name', 'State', 'Region',
 data = data.drop(columns=columns_to_drop)
 
 # select the features and target variable
@@ -28,7 +28,9 @@ dist_uniq_subcats = data['Sub-Category'].unique()
 print("distinct sub-category items:", dist_uniq_subcats, str(data['Sub-Category'].unique()), "counts:", data['Sub-Category'].value_counts())
 
 # encoding categorical variables
-categorical_features = ['City']
+categorical_features = ['City', 'Segment', 'Category', 'Product Name',
+                        'State', 'Region', 'Customer Name', 'Product ID',
+                        'Sales', 'Quantity', 'Discount',]
 one_hot_encoder = OneHotEncoder()
 
 # apply the ColumnTransformer to the categorical features using OHE encoder
@@ -72,7 +74,8 @@ print("y_test:\n", y_test)
 print("y_pred:\n", y_pred)
 
 # evaluate the model
-print(classification_report(y_test, y_pred, zero_division=0))
+classification_report_knn = classification_report(y_test, y_pred, zero_division=0)
+print(classification_report_knn)
 
 conf_matrix = confusion_matrix(y_test, y_pred)
 print("confusion matrix:\n", conf_matrix)
@@ -109,3 +112,62 @@ y_test_df.columns = ['actual Sub-Category']
 result_df = pd.concat([result_df, y_test_df], axis=1)
 
 print("test vs prediction items:\n", result_df)
+
+
+# present data graphically
+
+# bar chart sub category
+plt.figure(figsize=(10, 6))
+data['Sub-Category'].value_counts().plot(kind='bar', color='skyblue')
+plt.xlabel('Sub-Category')
+plt.ylabel('Count')
+plt.title('Bar Chart of Sub-Category Counts')
+plt.show()
+
+
+# parse classification report string to extract metrics
+classification_metrics = classification_report_knn.split('\n')[2:-5]
+precision, recall, f1_score, support = [], [], [], []
+
+for metrics in classification_metrics:
+    metrics_list = [float(metric) if '.' in metric else int(metric) for metric in metrics.split()[1:]]
+    precision.append(metrics_list[0])
+    recall.append(metrics_list[1])
+    f1_score.append(metrics_list[2])
+    support.append(metrics_list[3])
+
+# bar chart for precision
+plt.figure(figsize=(12, 6))
+plt.bar(dist_uniq_subcats, precision, color='lightblue')
+plt.xlabel('Sub-Category')
+plt.ylabel('Precision')
+plt.title('Precision for Each Sub-Category')
+plt.xticks(rotation=45, ha='right')
+plt.show()
+
+# bar chart for recall
+plt.figure(figsize=(12, 6))
+plt.bar(dist_uniq_subcats, recall, color='lightgreen')
+plt.xlabel('Sub-Category')
+plt.ylabel('Recall')
+plt.title('Recall for Each Sub-Category')
+plt.xticks(rotation=45, ha='right')
+plt.show()
+
+# bar chart for f1 score
+plt.figure(figsize=(12, 6))
+plt.bar(dist_uniq_subcats, f1_score, color='lightcoral')
+plt.xlabel('Sub-Category')
+plt.ylabel('F1 Score')
+plt.title('F1 Score for Each Sub-Category')
+plt.xticks(rotation=45, ha='right')
+plt.show()
+
+# bar chart for support
+plt.figure(figsize=(12, 6))
+plt.bar(dist_uniq_subcats, support, color='grey')
+plt.xlabel('Sub-Category')
+plt.ylabel('Support')
+plt.title('Support for Each Sub-Category')
+plt.xticks(rotation=45, ha='right')
+plt.show()
