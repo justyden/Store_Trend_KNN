@@ -4,7 +4,8 @@
 ### Team Members:
 - Tyler Thompson
   - Email: tylert123@yahoo.com
-- [Team Member 2]
+- Xiang Liu
+  - Email: 1784676846.xl@gmail.com  
 - [Team Member 3]
 
 ### Introduction
@@ -27,7 +28,7 @@ Several related topics align with this application, including retail analytics, 
 The dataset is sourced from [Sample Super Store](https://community.tableau.com/s/question/0D54T00000CWeX8SAL/sample-superstore-sales-excelxls) and is presented in an Excel format (.xls). This dataset comprises 9,994 purchases from various cities in the United States and Canada. Key features include category, product name, sales, quantity, discount, and profit. The primary label for the application is the city. The dataset incorporates numerical, categorical, and ordinal features, with a focus on numerical and categorical features for efficient model training. The sample data, consisting of around 10,000 entries, allows for robust experimentation.
 
 #### Data Example
-Below is an excerpt from the dataset before preprocessing steps:
+Below is an excerpt from the dataset before the preprocessing steps:
 ![Example Data](images/example_data.png)
 
 ### Methodology
@@ -37,15 +38,23 @@ The application's structure and processes are depicted in the following schemati
 ![Schematic Diagram](images/schematic_diagram.png)
 
 #### Data Visualization and Preprocessing
-Data preprocessing involved several steps to prepare the dataset for model training. Firstly, the .xls file was converted to .xlsx to meet the updated format requirements of pandas. Normalization was then performed using the minimum-maximum normalization technique. This involved scaling specific columns, such as sales, quantity, discount, and profit, to a range between 0 and 1, ensuring uniformity for effective model training.
+Data preprocessing involved several steps to prepare the dataset for model training. Firstly, the.xls file was converted to.xlsx to meet the updated format requirements of Pandas. Normalization was then performed using the minimum-maximum and Z_score normalization techniques. This involved scaling specific columns, such as sales, quantity, discount, and profit, to a range between 0 and 1, ensuring uniformity for effective model training. At first, we used the minimum-maximum normalization technique, but the scaling didn't come out correctly. For example, $-300 of profit and $20 of profit all have the same scaling value, which doesn't seem correct. Then we normalize the data using the Z-Score technique. The scaling looks correct when the profit is high, showing a positive value that is above 0, which means it is above the average profit, and when the profit is super low, it shows a negative value below 0, which means it is below the average profit or even negative. So we decided to use the Z-Score technique.
 
 ##### Normalization Technique
 ![Normalization Technique](images/normalization_technique.png)
+#### Z-Score Technique
+![image](https://github.com/justyden/Store_Trend_KNN/assets/117769320/48819b42-ccc4-4144-b418-80751568b4ca)
 
 #### Procedures and Features
-The methodology employed in this project encompasses several key procedures and features. The initial step involves exploratory data analysis (EDA) to gain insights into the distribution and relationships within the dataset. Following this, feature selection is conducted to identify the most influential variables for model training. Features such as category, product name, and geographic location are crucial for predicting consumer behavior and profitability.
+The methodology employed in this project encompasses several key procedures and features. The initial step involves exploratory data analysis (EDA) to gain insights into the distribution and relationships within the dataset. Following this, feature selection is conducted to identify the most influential variables for model training. Features such as city, category, sub-category, sales, quantity, discount, and profits are crucial for predicting consumer behavior and profitability.
 
-The primary algorithm utilized is the K-Nearest Neighbors (KNN) classification algorithm. KNN identifies patterns based on the similarity of instances, making it suitable for predicting city preferences and associated profits. Additionally, feature scaling techniques are applied to ensure that no single feature dominates the model training process.
+The algorithm applied was the K-Nearest Neighbors (KNN) classification algorithm, Random Forest Regression, and Random Forest Classification
+
+The original algorithm utilized is the K-Nearest Neighbors (KNN) classification algorithm. KNN identifies patterns based on the similarity of instances, making it suitable for predicting city preferences and associated profits and sub-categories. Additionally, feature scaling techniques are applied to ensure that no single feature dominates the model training process. But the result and the accuracy didn't come out great; the best accuracy we can get is 40% even with the parameter tuning. Then tested with the applied Random Forest Classification algorithm with the same features (profits and sub-categories) and target (city), the accuracy only increased by about 10%, which still didn't meet expectations.
+
+Second, we decided to change our features and target to see if we could get better accuracy and training scores as well. The feature we focused on was subcategory, category, sales, quantity, and target profit using the random forest regression algorithm. The result is still not good because the profit is a continuous value, regression doesn’t perform well at around 50% accuracy, and the training score is 83%. Then we categorized the profit into high, low, and negative for-profit and used the same feature and a random forest classifier model to predict the result, which came out so much better for profit. In the categorization, if the value is greater than $200, the profit is set to be high, under $200-$0, and negative if the value is less than $0. The accuracy was able to get up to 87%, and the training score was 89%. We discussed the result with the team members, and we applied the "discount" column to our features as well. The result is surprisingly great; the accuracy went up to 95% and the training score went up to 99.6%
+
+
 
 ### Experiments
 
@@ -56,9 +65,9 @@ To assess the model's performance accurately, the dataset is divided into traini
 Parameter tuning is a critical aspect of optimizing the KNN model. The selection of the optimal number of neighbors (K) is crucial for the model's accuracy. A systematic approach, such as cross-validation, is employed to iterate through various K values and identify the configuration that yields the best results.
 
 #### Evaluation Metrics
-The performance of the model is evaluated using several metrics, including accuracy, precision, recall, and F1-score. Accuracy provides an overall measure of the model's correctness, while precision and recall offer insights into the model's ability to predict positive instances correctly and capture all positive instances, respectively. The F1-score combines precision and recall, providing a balanced assessment of the model's performance.
+The performance of the model is evaluated using several metrics, including accuracy, precision, recall, and F1-score. Accuracy provides an overall measure of the model's correctness, while precision and recall offer insights into the model's ability to predict positive instances correctly and capture all positive instances, respectively. The F1 score combines precision and recall, providing a balanced assessment of the model's performance.
 
-#### Results (Tables/Graphs)
+#### Results (Tables and Graphs)
 The results of the experiments are presented in the form of tables and graphs. A confusion matrix is generated to visualize the model's performance in predicting city preferences and associated profits. Additionally, graphical representations, such as ROC curves, provide insights into the trade-off between true positive and false positive rates.
 
 #### Analysis of the Results
