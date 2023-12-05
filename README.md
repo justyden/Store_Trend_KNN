@@ -73,7 +73,7 @@ The performance of the model is evaluated using several metrics, including accur
 
 kNN Algorithm
 
-![Confusion matrix for kNN](https://github.com/justyden/Store_Trend_KNN/blob/data-preproc/graphs/knn/knn_confusion_matrix.png?raw=true)
+![Confusion matrix for kNN](graphs/knn/knn_confusion_matrix.png)
 
 
 Random Forest
