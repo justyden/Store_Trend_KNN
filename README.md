@@ -161,8 +161,9 @@ One unresolved issue pertains to the interpretability of the model's decisions. 
 #### Future Direction
 Future work could involve enhancing the model's predictive capabilities by incorporating more sophisticated machine learning algorithms, such as ensemble methods or neural networks. Additionally, expanding the dataset to include a more diverse set of regions and demographics would contribute to a more comprehensive understanding of consumer behavior. Collaboration with domain experts in retail and data science could provide valuable insights and further refine the model.
 
-### Appendix
-
-#### Snapshots and Others
-
 ### References
+- Anaconda Python Distribution - Anaconda | The World’s Most Popular Data Science Platform​
+
+- KNN Classifier sklearn.neighbors.KNeighborsClassifier — scikit-learn 1.3.2 documentation​
+
+- Random Forest sklearn.ensemble.RandomForestClassifier — scikit-learn 1.3.2 documentation​
