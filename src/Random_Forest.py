@@ -11,15 +11,15 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the data
-data = pd.read_excel('./Data/Z_score.xlsx')
+data = pd.read_excel('../Data/Z_score.xlsx')
 threshold_value = 0.776255947
-negative_pro = -0.117632811
+negative_pro = -0.122335512
 
 
 
 # Convert 'Profit' to a categorical variable (example: high profit vs. low profit vs negative profit)
 # You need to define the logic for this conversion
-data['Profit_Category'] = data['Profit'].apply(lambda x: 'High' if x > threshold_value else ('Negative' if x <=negative_pro else 'Low'))
+data['Profit_Category'] = data['Profit'].apply(lambda x: 'High' if x > threshold_value else ('Negative' if x < negative_pro else 'Low'))
 
 
 # Selecting only the relevant columns
