@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Load the data
-data = pd.read_excel('../Data/Z_score.xlsx')
+data = pd.read_excel('./Data/Z_score.xlsx')
 threshold_value = 0.776255947
 negative_pro = -0.117632811
 
@@ -36,6 +36,9 @@ preprocessor = ColumnTransformer(
 
 y = data['Profit_Category']
 X = data.drop('Profit_Category', axis=1)
+
+# get unique subcategories and its number from the column
+dist_uniq_subcats = data['Profit_Category'].unique()
 
 X_processed = preprocessor.fit_transform(X)
 
@@ -69,6 +72,16 @@ print("\nClassification Report:\n", classification_report(y_test, y_pred))
 conf_matrix = confusion_matrix(y_test, y_pred)
 print("confusion matrix:\n", conf_matrix)
 
+# create a DataFrame for better visualization
+conf_matrix_df = pd.DataFrame(conf_matrix, index=dist_uniq_subcats, columns=dist_uniq_subcats)
+
+# plot the confusion matrix
+plt.figure(figsize=(8, 6))
+sns.heatmap(conf_matrix_df, annot=True, fmt="d", cmap="Blues")
+plt.xlabel("predicted SubCats")
+plt.ylabel("true SubCats")
+plt.title("confusion matrix")
+plt.show()
 
 # print training score
 print("training score:\n", rf.score(X_train, y_train)* 100)

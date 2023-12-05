@@ -8,7 +8,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # load the data
-data = pd.read_excel('../Data/Z_score.xlsx')
+data = pd.read_excel('./Data/Z_score.xlsx')
 
 # preprocessing
 # drop columns that won't be used in the prediction
