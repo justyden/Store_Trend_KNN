@@ -71,10 +71,23 @@ The performance of the model is evaluated using several metrics, including accur
 
 #### Results (Tables and Graphs)
 
+Here we can see the graphs related to the KNN algorithm training results. 
+
 kNN Algorithm
+##### Confusion matrix for KNN
+![Confusion matrix for KNN](graphs/knn/knn_confusion_matrix.png)
 
-![Confusion matrix for kNN](graphs/knn/knn_confusion_matrix.png)
+##### Precision for KNN
+![Precision metric for KNN](graphs/knn/knn_precision_subcat.png)
 
+##### Recall for KNN
+![Recall metric for KNN](graphs/knn/knn_recall_subcat.png)
+
+##### Support for KNN
+![Support metric for KNN](graphs/knn/knn_support_subcat.png)
+
+##### F1 Score KNN
+![F1 metric for KNN](graphs/knn/knn_f1_subcat.png)
 
 Random Forest
 
