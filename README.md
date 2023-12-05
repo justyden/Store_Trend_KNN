@@ -67,14 +67,30 @@ Second, we decided to change our features and target to see if we could get bett
 ### Experiments
 
 #### Data Division (Training/Testing)
-To assess the model's performance accurately, the dataset is divided into training and testing sets. Approximately 80% of the data is allocated for training, allowing the model to learn patterns, while the remaining 20% is reserved for testing to evaluate its predictive capabilities. Stratified sampling is implemented to maintain the distribution of cities across both sets, ensuring representative training and testing subsets.
+To assess the model's performance accurately, the dataset is divided into training and testing sets. Approximately 80% of the data is allocated for training, allowing the model to learn patterns, while the remaining 20% is reserved for testing to evaluate its predictive capabilities. Stratified sampling is implemented to maintain the distribution of feature sets, ensuring representative training and testing subsets.
 
 #### Parameter Tuning
-### Parameter tuning is a critical aspect of optimizing the KNN and Random Forest models. 
-- The selection of the optimal number of neighbors (K) is crucial for the model's accuracy. A systematic approach, such as cross-validation, is employed to iterate through various K values and identify the configuration that yields the best results.
-- Random state parameters in machine learning algorithms, including the KNN and Random Forest classifiers, serve as a seed for the random number generator used by the algorithm. This parameter is used to ensure reproducibility. When you provide an integer value for a random state, it makes the output of the algorithm deterministic, meaning that you can expect the same results in multiple runs of the algorithm with the same input data and parameter settings.
-- N_estimators serve in Random Forest classifier is the number of trees in the forest. Typically, the more trees, the better the performance, but it also means a longer training time.
-- Max_depth serve The maximum depth of each tree. Deeper trees can model more complex patterns but can also lead to overfitting.
+##### Parameter tuning is a critical aspect of optimizing the KNN and Random Forest models. 
+##### KNN:
+- The selection of the optimal number of neighbors (K) is crucial for the model's accuracy. A systematic approach, such as cross-validation, is employed to iterate through various K values and identify the configuration that yields the best results. K was set to 200.
+- Random state parameters in machine learning algorithms, including the KNN and Random Forest classifiers, serve as a seed for the random number generator used by the algorithm. This parameter is used to ensure reproducibility. When you provide an integer value for a random state, it makes the output of the algorithm deterministic, meaning that you can expect the same results in multiple runs of the
+algorithm with the same input data and parameter settings. Random State was set to 42 in KNN Classifier.
+- Weights: This parameter determines how the classification is weighted when making a prediction. The options are typically 'uniform' (where all points in each neighborhood are weighted equally), 'distance' (where points are weighted by the inverse of their distance, so closer neighbors have a greater influence), or a custom function. Weights was set to 'uniform'.
+
+- Algorithm: This specifies the algorithm used to compute the nearest neighbors. Options include 'ball_tree', 'kd_tree', 'brute', and 'auto'. The 'auto' option attempts to decide the most appropriate algorithm based on the values passed to fit method. Algorithm was set to 'auto'.
+
+- leaf_size: This parameter can affect the speed of the construction and query, as well as the memory required to store the tree. The leaf size is passed to the BallTree or KDTree algorithms. In general, it does not affect the actual results, but it can impact the speed of the query and the memory required to store the constructed tree. Leaf_size was set to 30.
+
+- p: This parameter is related to the choice of metric; when p = 1, this is equivalent to using manhattan_distance (l1), and euclidean_distance (l2) for p = 2. For arbitrary p, minkowski_distance (lp) is used. It effectively determines the power parameter for the Minkowski metric. p value was set to 2.
+
+- Metric: This determines the distance metric used for the tree. The default metric is minkowski, and with p=2 is equivalent to the standard Euclidean metric. Other common options include 'euclidean', 'manhattan', 'chebyshev', 'hamming', 'canberra', and 'braycurtis', or any other valid distance metric supported by scipy.spatial.distance. Metric was set to 'euclidean' distance method.
+
+##### Random Forest Classifier
+- Random state parameters in machine learning algorithms, including the KNN and Random Forest classifiers, serve as a seed for the random number generator used by the algorithm. This parameter is used to ensure reproducibility. When you provide an integer value for a random state, it makes the output of the algorithm deterministic, meaning that you can expect the same results in multiple runs of the
+algorithm with the same input data and parameter settings. Random State was set to 100 in RF Classifier.
+- N_estimators serve in Random Forest classifier is the number of trees in the forest. Typically, the more trees, the better the performance, but it also means a longer training time. N_Estimators was set to 250.
+- Max_depth serve The maximum depth of each tree. Deeper trees can model more complex patterns but can also lead to overfitting. Max depth of the tree was set to 20.
+
 
 #### Evaluation Metrics
 The performance of the model is evaluated using several metrics, including accuracy, precision, recall, and F1-score. Accuracy provides an overall measure of the model's correctness, while precision and recall offer insights into the model's ability to predict positive instances correctly and capture all positive instances, respectively. The F1 score combines precision and recall, providing a balanced assessment of the model's performance.
