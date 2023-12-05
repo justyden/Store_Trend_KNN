@@ -96,7 +96,57 @@ algorithm with the same input data and parameter settings. Random State was set 
 The performance of the model is evaluated using several metrics, including accuracy, precision, recall, and F1-score. Accuracy provides an overall measure of the model's correctness, while precision and recall offer insights into the model's ability to predict positive instances correctly and capture all positive instances, respectively. The F1 score combines precision and recall, providing a balanced assessment of the model's performance.
 
 #### Results (Tables and Graphs)
-The results of the experiments are presented in the form of tables and graphs. A confusion matrix is generated to visualize the model's performance in predicting city preferences and associated profits. Additionally, graphical representations, such as ROC curves, provide insights into the trade-off between true positive and false positive rates.
+
+##### KNN Model
+
+Here we can see the graphs related to the KNN algorithm training results. 
+
+
+##### Confusion matrix for KNN
+![Confusion matrix for KNN](graphs/knn/knn_confusion_matrix.png)
+
+
+##### Precision for KNN
+![Precision metric for KNN](graphs/knn/knn_precision_subcat.png)
+
+
+##### Recall for KNN
+![Recall metric for KNN](graphs/knn/knn_recall_subcat.png)
+
+
+##### Support for KNN
+![Support metric for KNN](graphs/knn/knn_support_subcat.png)
+
+
+##### F1 Score KNN
+![F1 metric for KNN](graphs/knn/knn_f1_subcat.png)
+
+
+##### Random Forest Model
+
+And below we can see the graphs related to the Random Forest algorithm training results. 
+
+
+##### Confusion matrix for Random Forest
+![Confusion matrix for Random Forest](graphs/rand_forest/random_forest_confusion_matrix.png)
+
+
+##### Precision for Random Forest
+![Precision metric for Random Forest](graphs/rand_forest/rf_precision.png)
+
+
+##### Recall for Random Forest
+![Recall metric for Random Forest](graphs/rand_forest/rf_recall.png)
+
+
+##### Support for Random Forest
+![Support metric for Random Forest](graphs/rand_forest/support_subcat.png)
+
+
+##### F1 Score Random Forest
+![F1 metric for Random Forest](graphs/rand_forest/f1_score)
+
+The results of the experiments are presented in the form of tables and graphs. A confusion matrix is generated to visualize the model's performance in predicting city preferences and associated profits.
 
 #### Analysis of the Results
 The analysis of results involves interpreting the metrics and visualizations to draw meaningful conclusions. Insights are gained into which cities exhibit similar purchasing behavior, the most profitable products in specific regions, and any patterns that may guide strategic business decisions. Any discrepancies between predicted and actual outcomes are thoroughly investigated to understand potential areas for improvement.
